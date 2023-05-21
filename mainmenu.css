@@ -1,0 +1,100 @@
+body {
+  background: #222;
+  /* background-image: linear-gradient(135deg, #222 , wheat ) */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+main {
+  position: relative;
+  width: 40%;
+  height: 500px;
+
+  border: 2px solid var(--warning);
+  border-radius: 2em;
+  box-shadow: 0 0 2em 0.5em var(--warning), inset 0 0 2em 0.5em var(--warning);
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+
+/* main::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 70%;
+  filter: blur(10em);
+  left: 0;
+  background-color: var(--warning);
+  transform: perspective(50em) rotateX(70deg);
+} */
+
+main > h1 {
+  font-size: 4rem;
+  animation: colorH1 infinite alternate 3s;
+}
+
+main > button {
+  position: relative;
+  margin-top: 1em;
+  background-color: transparent;
+  border: 3px solid var(--success);
+  box-shadow: 0 0 2em 0.3em var(--success), inset 0 0 1em 0em var(--success);
+  color: var(--danger);
+  color: rgba(235, 252, 8, 0.3);
+  font-size: 3rem;
+  text-transform: uppercase;
+  padding: 0.5em 0.5em;
+  border-radius: 0.5em;
+  transition: all 1s;
+}
+
+main > button::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  filter: blur(1em);
+  width: 100%;
+  height: 100%;
+  background-color: var(--success);
+  transform: perspective(4em) rotateX(70deg);
+  transition: all 1s;
+}
+
+main > button:hover {
+  cursor: pointer;
+  color: rgba(235, 252, 8, 1);
+  border-color: var(--danger);
+  box-shadow: 0 0 2em 0.3em var(--danger), inset 0 0 1em 0em var(--danger);
+}
+
+main > button:hover::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    filter: blur(1em);
+    width: 100%;
+    height: 100%;
+    background-color: var(--danger);
+    transform: perspective(4em) rotateX(70deg);
+  }
+
+@keyframes colorH1 {
+  from {
+    color: var(--dark-orange);
+
+    transform: scale(1.5);
+  }
+  to {
+    color: var(--warning);
+    transform: scale(0.8);
+  }
+}

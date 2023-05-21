@@ -1,6 +1,79 @@
 body {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #222;
+
+  
 }
+
+body > div {
+  display: flex;
+  margin-bottom: 3rem;
+  width: 90%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+.btn{
+  padding: 0.3em 2em;
+  font-size: 2rem;
+  letter-spacing: 0.1em;
+  color: var(--warning);
+  border: 2px solid var(--warning);
+  box-shadow: 0 0 1em 0.2em var(--warning), inset 0 0 1em 0.2em var(--warning);
+  background-color: transparent;
+  border-radius: 0.5em;
+  transition: all 1s;
+}
+
+
+
+.pause:hover{
+  
+  color: var(--success);
+  border-color: var(--success);
+  box-shadow: 0 0 1em 0.2em var(--success), inset 0 0 1em 0.2em var(--success);
+}
+
+ .score{
+  font-size: 4rem;
+  color: var(--warning);
+  letter-spacing: 0.1em;
+  text-shadow: 0 0 2em var(--warning), 0 0 0.15em white;
+}
+
+
+canvas{
+  border: 2px solid var(--warning);
+  box-shadow:0 0 2em 1em var(--warning);
+}
+
+
+.modal{
+  margin-inline: auto;
+  background-color: transparent;
+  padding: 2em;
+  border: 2px solid var(--cyan-light);
+  box-shadow: 0 0 2em 0.3em var(--cyan-light),
+  inset 0 0 2em 0.3em var(--cyan-light);
+  border-radius: 2em;
+  text-align: center;
+ 
+}
+
+.modal > h1 {
+  color: var(--danger);
+  margin: 1em 0;
+}
+
+.modal::backdrop{
+  background-color: rgb(0 0 0 / 0.7);
+}
+
+
+
+

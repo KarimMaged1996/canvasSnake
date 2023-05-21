@@ -5,12 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Snake</title>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./default.css">
     <link rel="stylesheet" href="style.css" />
     <script src="index.js" defer></script>
   </head>
   <body>
-    <h1>Snake</h1>
+    <dialog class="modal" data-modal>
+      <h1>GAME OVER</h1>
+      <button class="btn again" data-again>Play Again</button>
+    </dialog>
+
+    
+   <div>
+     <button class="btn pause" data-pauseBtn>Pause</button>
+      <h3 class="score">Score:<span data-score>0</span></h3>
+   </div>
     <canvas data-canvas></canvas>
-    <h3>Score</h3>
   </body>
 </html>
